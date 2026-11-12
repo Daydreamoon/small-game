@@ -33,6 +33,7 @@ namespace Breakline
         public bool IsAutomation { get; private set; }
 
         private string _autoMode;
+        private static bool s_LevelExtraApplied;
 
         private void Awake()
         {
@@ -44,8 +45,16 @@ namespace Breakline
                 int selected;
                 if (int.TryParse(_autoMode.Substring(5), out selected))
                 {
-                    M1Level.Selected = Mathf.Clamp(selected - 1, 0, M1Level.LevelCount - 1);
                     levelLaunch = true;
+                    // A launch extra such as `level2` must only choose the first
+                    // scene. Otherwise it is re-read after a scene reload and
+                    // forces the same level again instead of advancing.
+                    if (!s_LevelExtraApplied)
+                    {
+                        s_LevelExtraApplied = true;
+                        M1Level.Selected = Mathf.Clamp(selected - 1, 0, M1Level.LevelCount - 1);
+                        Debug.Log($"[BREAKLINE] Launch level extra {_autoMode} -> level {M1Level.Selected + 1}/{M1Level.LevelCount}");
+                    }
                 }
             }
 
