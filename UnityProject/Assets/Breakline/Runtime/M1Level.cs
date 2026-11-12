@@ -305,7 +305,7 @@ namespace Breakline
 
         private void BuildRooftopChase(TerrainSystem t)
         {
-            // Staggered roofs. The top surfaces are 9, 11, 8 and 10 tiles high; every gap
+            // Staggered roofs. The top surfaces are 9, 10, 8 and 10 tiles high; every gap
             // is at most two tiles and the vertical changes stay within the jump arc.
             t.Fill(9, 6, 1, 2, TerrainSystem.Concrete);       // one-tile access step
             t.Fill(10, 6, 10, 3, TerrainSystem.Concrete);     // roof A, top 9
