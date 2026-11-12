@@ -1,0 +1,7 @@
+﻿  board temp status: 0
+  low bat status: 0
+  reverse wl chg status: 0
+  status: 2
+  level: 78
+  temperature: 341
+  Capacity level: -1

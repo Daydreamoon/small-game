@@ -1,0 +1,8 @@
+﻿
+11-12 16:46:06.361 I/Unity   (13927): [BREAKLINE SLAM TEST] slam started at y=12.03, vy=-8.50
+11-12 16:46:06.361 I/Unity   (13927): Breakline.PlayerController:DebugStartSlam()
+11-12 16:46:06.361 I/Unity   (13927): Breakline.<AutoSlamAfterBoot>d__76:MoveNext()
+11-12 16:46:07.272 I/Unity   (13927): [BREAKLINE SLAM TEST] PASS started=True grounded=True slamming=False y=7.68
+11-12 16:46:07.272 I/Unity   (13927): Breakline.<AutoSlamAfterBoot>d__76:MoveNext()
+
+
