@@ -1,0 +1,8 @@
+key,value,unit,min,max,tune_up,tune_down
+chunkSize,16,cells,8,32,地形块更大；重建更少但单次更重,地形块更小；重建更细但次数更多
+dirtHP,18,hp,4,60,泥土更耐打；枪更难开路,泥土更容易被枪打穿
+concreteHP,90,hp,20,200,混凝土更坚固；更依赖爆炸,混凝土更容易被爆炸穿透
+supportHP,60,hp,10,200,黄色支撑更耐打；更难触发坍塌,支撑更容易被炸断
+supportDelay,0.20,s,0.05,0.8,坍塌预警更久；更有戏剧性但更慢,坍塌来得更快更突然
+colliderBudget,2,chunks,1,6,每帧重建更多碰撞块；地形碰撞更及时但更吃 CPU,更省 CPU 但可能晚一帧
+supportCheckInterval,0.05,s,0.01,0.5,支撑检查更稀疏；更省 CPU,支撑检查更及时

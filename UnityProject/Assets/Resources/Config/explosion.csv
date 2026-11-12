@@ -1,0 +1,13 @@
+key,value,unit,min,max,tune_up,tune_down
+barrelHP,6,hp,1,30,油桶更耐打；需要更多子弹才爆,油桶更容易被流弹提前引爆
+barrelRadius,3.0,tiles,1.0,5.0,油桶爆炸范围更大；连锁更夸张,范围更小
+barrelDamage,40,hp,5,100,油桶对敌人更致命,油桶更偏场景破坏
+barrelTerrainDamage,150,hp,20,400,油桶更容易炸塌结构,炸地形能力下降
+crateHP,4,hp,1,20,弹药箱更耐打,更容易被点爆
+crateRadius,2.4,tiles,1.0,4.0,弹药箱爆炸范围更大,范围更小
+crateDamage,30,hp,5,90,弹药箱伤害更高,伤害更低
+crateTerrainDamage,110,hp,10,300,弹药箱更容易挖地形,挖地形减少
+chainDelayMin,0.08,s,0.02,0.30,连锁启动更慢；节奏更拖,连锁更快；视觉更爆炸
+chainDelayMax,0.15,s,0.03,0.40,连锁传播上限延迟更长；更有接力感,连锁更几乎同时
+chainMax,24,count,1,60,允许更长的连锁爆炸链,连锁更早截断
+chainPerFrame,8,count,1,24,单帧引爆更多；更爽但更容易尖刺,单帧分摊更平缓

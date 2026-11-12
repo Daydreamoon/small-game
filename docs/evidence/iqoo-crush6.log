@@ -1,0 +1,17 @@
+iQOO V2425A crush autotest log excerpt
+Command:
+  adb shell am force-stop com.breakline.m1
+  adb shell am start -W -n com.breakline.m1/com.unity3d.player.UnityPlayerActivity --es breakline_auto crush
+Captured: 2026-11-12 12:44:51-12:44:58 Asia/Shanghai
+Device serial: 10AEBB32GF000F9
+
+12-12 12:44:53.729 I/Unity: [BREAKLINE] Boot complete. Unity 2021.3.45f2, screen 2800x1260, RT 600x270 x4, CSV /storage/emulated/0/Android/data/com.breakline.m1/files/M1-Performance.csv
+12-12 12:44:55.577 I/Unity: [BREAKLINE] Armored crush target killed; gate open.
+12-12 12:44:55.577 I/Unity: Breakline.EnemySystem:OnCrushed(Enemy)
+12-12 12:44:55.577 I/Unity: Breakline.EnemySystem:CrushInRect(Rect, Single)
+12-12 12:44:55.577 I/Unity: Breakline.TerrainSystem:Tick(Single)
+12-12 12:44:57.472 I/Unity: [BREAKLINE AUTOTEST] PASS initialAlive=True barrel=True crushed=True gateOpen=True screenshot=/storage/emulated/0/Android/data/com.breakline.m1/files/m1-autotest.png
+12-12 12:44:57.635 E/Unity: Failed to store screen shot (/storage/emulated/0/Android/data/com.breakline.m1/files/storage/emulated/0/Android/data/com.breakline.m1/files/m1-autotest.png)
+
+Result: PASS (functional crush + gate). The screenshot path is a known path bug; external
+adb screencap iqoo-crush6.png is the visual evidence.

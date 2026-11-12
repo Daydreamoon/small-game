@@ -1,0 +1,18 @@
+iQOO real-device test record
+Date: 2026-11-12 (Asia/Shanghai)
+Device: vivo iQOO Neo10 (model V2425A, product PD2425)
+Serial: 10AEBB32GF000F9
+Android: 16 / SDK 36
+SoC: SM8650 (Snapdragon 8 Gen 3 class), 8 cores
+GPU: Adreno 750
+RAM: 15197 MB
+Display: 1260 x 2800, 560 dpi; panel supports 90/120/144 Hz; Unity reports 60 Hz refresh
+Graphics API used by app: OpenGL ES 3.2, Adreno 750
+App: com.breakline.m1, version 0.1.0 (versionCode 1), minSdk 26, targetSdk 33, arm64-v8a
+Unity: 2021.3.45f2, IL2CPP, Release
+Render: 600 x 270 RT, x4 integer scale; presented content about 2400 x 1080, black side bars
+Test conditions: AC powered/charging, battery about 71 %, battery temperature about 37-39 C,
+CPU reported 64-76 C. This is a hot/charging condition and is not a controlled thermal lab.
+Caution: This is a flagship-class device, not the approved mid-range Redmi Note 12 class.
+The data below proves the Android runtime path and is real-device measured, but it does NOT
+replace the mid-range Go/No-Go target device.

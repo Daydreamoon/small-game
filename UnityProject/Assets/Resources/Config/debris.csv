@@ -1,0 +1,13 @@
+key,value,unit,min,max,tune_up,tune_down
+visualTarget,200,count,50,300,同屏目标碎片更多；更爽但更吃性能,碎片更少
+visualPool,320,count,200,400,碎片池更大；可承受更多爆炸,池更小更省内存
+fullBodyMax,40,count,0,64,常规全物理碎片更多；交互更真实但更吃物理,全物理碎片更少
+corpseMax,12,count,0,20,同时物理尸体更多,尸体更少
+collapseMaxChunks,12,count,1,24,一次可生成更多坍塌块,坍塌块更少
+t2Gravity,32,u/s2,10,60,轻碎片下落更快,碎片飘得更久
+t2LifetimeMin,0.6,s,0.2,3.0,最短碎片存活更久,消失更快
+t2LifetimeMax,1.6,s,0.2,5.0,最长碎片存活更久,消失更快
+t2SizeMin,0.10,tiles,0.03,0.30,最小碎屑更大,更细
+t2SizeMax,0.28,tiles,0.05,0.60,最大碎屑更大,更细
+t1Lifetime,2.5,s,0.5,6.0,全物理小碎片停留更久,更快清理
+perfWindowSeconds,10,s,5,30,性能采样窗口更长,更短

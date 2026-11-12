@@ -1,0 +1,35 @@
+# Unity generated
+UnityProject/[Ll]ibrary/
+UnityProject/[Tt]emp/
+UnityProject/[Oo]bj/
+UnityProject/[Bb]uild/
+UnityProject/[Bb]uilds/
+UnityProject/[Ll]ogs/
+UnityProject/[Uu]ser[Ss]ettings/
+UnityProject/[Mm]emoryCaptures/
+UnityProject/.vs/
+UnityProject/*.csproj
+UnityProject/*.sln
+UnityProject/*.user
+UnityProject/*.pidb
+UnityProject/*.booproj
+UnityProject/*.svd
+UnityProject/*.pdb
+UnityProject/*.mdb
+UnityProject/*.opendb
+UnityProject/*.VC.db
+
+# Local build artifacts and delivery packages
+Builds/
+deliverables/
+*.apk
+*.aab
+*.zip
+
+# Local logs, caches and agent data
+logs/
+.memsearch/
+
+# OS
+Thumbs.db
+.DS_Store

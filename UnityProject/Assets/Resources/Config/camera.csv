@@ -1,0 +1,7 @@
+key,value,unit,min,max,tune_up,tune_down
+lookaheadX,1.6,tiles,0,5.0,镜头更早看向前方；视野预判更强,镜头更居中；前后视野更均衡
+lookaheadY,0.6,tiles,0,3.0,镜头更偏向瞄准高度,镜头更平
+damping,0.12,s,0.02,0.5,跟随更软更慢；更容易有漂浮感,跟随更硬更及时
+deadzoneX,2.0,tiles,0,5.0,角色在中心附近移动时镜头更不动；更稳,镜头更紧跟
+deadzoneY,1.0,tiles,0,3.0,垂直镜头更稳,垂直跟随更紧
+pixelSnap,0.0625,units,0.0625,0.0625,固定为1个美术像素；不建议改,固定为1个美术像素；不建议改

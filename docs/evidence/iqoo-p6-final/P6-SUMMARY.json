@@ -1,0 +1,27 @@
+{
+  "source": "E:\\小游戏开发\\docs\\evidence\\iqoo-p6-final\\M1-Performance.csv",
+  "rows": 61,
+  "raw_files": 61,
+  "frames_from_rows": 36239,
+  "frames_from_raw": 36239,
+  "elapsed_s": 601.793,
+  "fps_avg_weighted": 60.218,
+  "fps_1pct_low": 60.248,
+  "fps_0_1pct_low": 60.31,
+  "p1_frame_ms": 16.598,
+  "p0_1_frame_ms": 16.581,
+  "max_frame_ms": 16.66,
+  "windows_max_frame_over_33ms": 0,
+  "raw_frames_over_33ms": 0,
+  "worst_window_1pct_low": 60.15,
+  "worst_window_0_1pct_low": 60.03,
+  "first_timestamp": "2026-11-12T06:13:15.6520540Z",
+  "last_timestamp": "2026-11-12T06:26:39.7732230Z",
+  "build": "Release",
+  "device": "vivo V2425A",
+  "notes": [
+    "complete;mean=16.61ms;p99=16.61ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-062523-stress-200vis-12phys-chain.csv",
+    "complete;mean=16.61ms;p99=16.61ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-062536-stress-200vis-12phys-chain.csv",
+    "complete;mean=16.61ms;p99=16.62ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-062639-stress-200vis-12phys-chain.csv"
+  ]
+}

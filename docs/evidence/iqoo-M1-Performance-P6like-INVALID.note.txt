@@ -1,0 +1,1 @@
+INVALID for P6: only 7 data rows (6 old P4/P5 + 1 auto-stress row). The 40x loop did not capture per-run CSVs because each app start overwrote M1-Performance.csv and 13s wait was shorter than ~10s cold start + 10s window. Do not use as P6 evidence.
