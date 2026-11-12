@@ -184,6 +184,8 @@ namespace Breakline
                 if (_mouseAim)
                 {
                     Vector2 delta = gui - _mouseAimStart;
+                    // GUI y grows downward; AimInput/world y grows upward.
+                    delta.y = -delta.y;
                     if (delta.magnitude >= AimDragThreshold)
                     {
                         AimInput = delta.normalized;
@@ -345,6 +347,8 @@ namespace Breakline
         private void UpdateAimDrag(Vector2 guiPos)
         {
             Vector2 delta = guiPos - _aimStart;
+            // Touch/GUI y grows downward; the shot direction must use world-up y.
+            delta.y = -delta.y;
             if (delta.magnitude < AimDragThreshold)
                 return;
 
@@ -362,6 +366,8 @@ namespace Breakline
         {
             Vector2 guiPos = new Vector2(touch.position.x, Screen.height - touch.position.y);
             Vector2 delta = guiPos - Layout.JoystickCenter;
+            // JoystickRaw is also consumed as a world-up vector by MoveVertical.
+            delta.y = -delta.y;
             float r = Layout.JoystickRadius;
             Vector2 clamped = Vector2.ClampMagnitude(delta, r);
             JoystickRaw = clamped / r;

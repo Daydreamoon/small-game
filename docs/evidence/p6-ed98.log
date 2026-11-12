@@ -1,0 +1,112 @@
+﻿11-12 15:01:15.289 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:01:26.297 I/Unity   (26826): [BREAKLINE] P6 cycle 1/56 done
+11-12 15:01:26.299 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:01:37.310 I/Unity   (26826): [BREAKLINE] P6 cycle 2/56 done
+11-12 15:01:37.313 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:01:48.323 I/Unity   (26826): [BREAKLINE] P6 cycle 3/56 done
+11-12 15:01:48.326 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:01:59.336 I/Unity   (26826): [BREAKLINE] P6 cycle 4/56 done
+11-12 15:01:59.339 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:02:10.345 I/Unity   (26826): [BREAKLINE] P6 cycle 5/56 done
+11-12 15:02:10.348 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:02:21.356 I/Unity   (26826): [BREAKLINE] P6 cycle 6/56 done
+11-12 15:02:21.359 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:02:32.366 I/Unity   (26826): [BREAKLINE] P6 cycle 7/56 done
+11-12 15:02:32.369 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:02:43.379 I/Unity   (26826): [BREAKLINE] P6 cycle 8/56 done
+11-12 15:02:43.384 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:02:54.390 I/Unity   (26826): [BREAKLINE] P6 cycle 9/56 done
+11-12 15:02:54.393 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:03:05.398 I/Unity   (26826): [BREAKLINE] P6 cycle 10/56 done
+11-12 15:03:05.401 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:03:16.410 I/Unity   (26826): [BREAKLINE] P6 cycle 11/56 done
+11-12 15:03:16.413 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:03:27.420 I/Unity   (26826): [BREAKLINE] P6 cycle 12/56 done
+11-12 15:03:27.422 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:03:38.430 I/Unity   (26826): [BREAKLINE] P6 cycle 13/56 done
+11-12 15:03:38.432 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:03:49.441 I/Unity   (26826): [BREAKLINE] P6 cycle 14/56 done
+11-12 15:03:49.444 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:00.452 I/Unity   (26826): [BREAKLINE] P6 cycle 15/56 done
+11-12 15:04:00.454 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:11.465 I/Unity   (26826): [BREAKLINE] P6 cycle 16/56 done
+11-12 15:04:11.467 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:22.476 I/Unity   (26826): [BREAKLINE] P6 cycle 17/56 done
+11-12 15:04:22.478 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:33.487 I/Unity   (26826): [BREAKLINE] P6 cycle 18/56 done
+11-12 15:04:33.489 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:44.499 I/Unity   (26826): [BREAKLINE] P6 cycle 19/56 done
+11-12 15:04:44.501 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:04:55.513 I/Unity   (26826): [BREAKLINE] P6 cycle 20/56 done
+11-12 15:04:55.515 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:05:06.526 I/Unity   (26826): [BREAKLINE] P6 cycle 21/56 done
+11-12 15:05:06.529 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:05:17.539 I/Unity   (26826): [BREAKLINE] P6 cycle 22/56 done
+11-12 15:05:17.543 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:05:28.551 I/Unity   (26826): [BREAKLINE] P6 cycle 23/56 done
+11-12 15:05:28.554 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:05:39.561 I/Unity   (26826): [BREAKLINE] P6 cycle 24/56 done
+11-12 15:05:39.565 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:05:50.573 I/Unity   (26826): [BREAKLINE] P6 cycle 25/56 done
+11-12 15:05:50.579 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:01.586 I/Unity   (26826): [BREAKLINE] P6 cycle 26/56 done
+11-12 15:06:01.590 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:12.593 I/Unity   (26826): [BREAKLINE] P6 cycle 27/56 done
+11-12 15:06:12.597 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:23.605 I/Unity   (26826): [BREAKLINE] P6 cycle 28/56 done
+11-12 15:06:23.612 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:34.617 I/Unity   (26826): [BREAKLINE] P6 cycle 29/56 done
+11-12 15:06:34.620 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:45.629 I/Unity   (26826): [BREAKLINE] P6 cycle 30/56 done
+11-12 15:06:45.632 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:06:56.640 I/Unity   (26826): [BREAKLINE] P6 cycle 31/56 done
+11-12 15:06:56.644 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:07:07.652 I/Unity   (26826): [BREAKLINE] P6 cycle 32/56 done
+11-12 15:07:07.655 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:07:18.660 I/Unity   (26826): [BREAKLINE] P6 cycle 33/56 done
+11-12 15:07:18.663 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:07:29.674 I/Unity   (26826): [BREAKLINE] P6 cycle 34/56 done
+11-12 15:07:29.677 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:07:40.686 I/Unity   (26826): [BREAKLINE] P6 cycle 35/56 done
+11-12 15:07:40.689 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:07:51.698 I/Unity   (26826): [BREAKLINE] P6 cycle 36/56 done
+11-12 15:07:51.701 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:02.711 I/Unity   (26826): [BREAKLINE] P6 cycle 37/56 done
+11-12 15:08:02.715 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:13.724 I/Unity   (26826): [BREAKLINE] P6 cycle 38/56 done
+11-12 15:08:13.728 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:24.735 I/Unity   (26826): [BREAKLINE] P6 cycle 39/56 done
+11-12 15:08:24.736 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:35.749 I/Unity   (26826): [BREAKLINE] P6 cycle 40/56 done
+11-12 15:08:35.752 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:46.764 I/Unity   (26826): [BREAKLINE] P6 cycle 41/56 done
+11-12 15:08:46.769 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:08:57.777 I/Unity   (26826): [BREAKLINE] P6 cycle 42/56 done
+11-12 15:08:57.780 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:09:08.789 I/Unity   (26826): [BREAKLINE] P6 cycle 43/56 done
+11-12 15:09:08.791 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:09:19.798 I/Unity   (26826): [BREAKLINE] P6 cycle 44/56 done
+11-12 15:09:19.801 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:09:30.810 I/Unity   (26826): [BREAKLINE] P6 cycle 45/56 done
+11-12 15:09:30.814 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:09:41.821 I/Unity   (26826): [BREAKLINE] P6 cycle 46/56 done
+11-12 15:09:41.822 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:09:52.833 I/Unity   (26826): [BREAKLINE] P6 cycle 47/56 done
+11-12 15:09:52.835 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:03.844 I/Unity   (26826): [BREAKLINE] P6 cycle 48/56 done
+11-12 15:10:03.846 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:14.856 I/Unity   (26826): [BREAKLINE] P6 cycle 49/56 done
+11-12 15:10:14.860 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:25.868 I/Unity   (26826): [BREAKLINE] P6 cycle 50/56 done
+11-12 15:10:25.871 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:36.881 I/Unity   (26826): [BREAKLINE] P6 cycle 51/56 done
+11-12 15:10:36.887 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:47.892 I/Unity   (26826): [BREAKLINE] P6 cycle 52/56 done
+11-12 15:10:47.897 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:10:58.907 I/Unity   (26826): [BREAKLINE] P6 cycle 53/56 done
+11-12 15:10:58.911 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:11:09.916 I/Unity   (26826): [BREAKLINE] P6 cycle 54/56 done
+11-12 15:11:09.921 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:11:20.930 I/Unity   (26826): [BREAKLINE] P6 cycle 55/56 done
+11-12 15:11:20.933 I/Unity   (26826): [BREAKLINE] Perf recording started: stress-200vis-12phys-chain, 10.0s
+11-12 15:11:31.940 I/Unity   (26826): [BREAKLINE] P6 cycle 56/56 done

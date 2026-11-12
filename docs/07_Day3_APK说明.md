@@ -1,9 +1,9 @@
 # Day 3 APK / M1 可安装包说明（更新：真机已启动）
 
-> 更新时间：2026-11-12 14:50（Asia/Shanghai）
-> 交付性质：M1 灰盒可安装包。**已在 vivo iQOO Neo10 真机安装/启动/触摸冒烟，并采集 P4/P5 CSV。**
+> 更新时间：2026-11-12 15:25（Asia/Shanghai）
+> 交付性质：M1 灰盒可安装包。**已在 vivo iQOO Neo10 真机安装/启动/触摸冒烟，并采集 P4/P5/P6 CSV。**
 > **用户已于 2026-11-12 指定 iQOO Neo10 为最终目标机；它是高端机，结果不外推中端。M1 尚未最终 Go。**
-> 当前最终 APK 是控制/汉化修正后的 `ED98...`，包含拖拽瞄准、摇杆修复、落地不爆炸、贴墙不下滑与全中文 UI；源码/APK 一致。
+> 当前最终 APK 是控制/汉化 + 拖拽 Y 轴方向修复后的 `6C9A...`；最终数据与已知限制以 [08_最终真机验收_2026-11-12.md](08_最终真机验收_2026-11-12.md) 为准。
 
 ## 1. 文件
 
@@ -12,7 +12,7 @@
 | Debug 路径 | `E:\BreaklineDeliver\BREAKLINE_M1_DAY3_DEBUG_arm64.apk` |
 | Debug 大小 / SHA-256 | 21.30 MB / `D6E88A3D59A96D4BE7E3CDEAB1DD633B862E674E01A6C04E14AA1D5572D09882` |
 | Release 路径 | `E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk` |
-| Release 大小 / SHA-256 | 20,030,542 B（约 19.10 MiB）/ `ED9846D2AF8FCE9AD4EF4DC4484344B64A7A7E6423AD8482F80E2BAC9A6DF78E` |
+| Release 大小 / SHA-256 | 20,038,662 B（约 19.11 MiB）/ `6C9A4A3041863C81AC4F1DC5ADC65EA513E4DABC79C6E8B78F9953080725F38E` |
 | 包名 / 版本 | `com.breakline.m1` / 0.1.0 (versionCode 1) |
 | 引擎/构建 | Unity 2021.3.45f2，IL2CPP，ARM64，GLES3，Release |
 | minSdk / targetSdk | 26 / 33 |

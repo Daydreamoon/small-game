@@ -1,0 +1,1 @@
+﻿cycles=56; utc=2026-11-12T07:11:31.9412230Z; csv=/storage/emulated/0/Android/data/com.breakline.m1/files/M1-Performance.csv

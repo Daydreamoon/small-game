@@ -309,7 +309,8 @@ namespace Breakline
             GUI.DrawTexture(new Rect(jc.x - jr, jc.y - jr, jr * 2f, jr * 2f), _game.Art.UIRing);
             GUI.color = new Color(1f, 1f, 1f, 0.07f);
             GUI.DrawTexture(new Rect(jc.x - jr, jc.y - jr, jr * 2f, jr * 2f), _game.Art.UICircle);
-            Vector2 kr = jc + _game.Input.JoystickRaw * jr;
+            Vector2 raw = _game.Input.JoystickRaw;
+            Vector2 kr = jc + new Vector2(raw.x, -raw.y) * jr;
             float knob = layout.KnobRadius;
             GUI.color = new Color(0.80f, 0.95f, 1f, 0.42f);
             GUI.DrawTexture(new Rect(kr.x - knob, kr.y - knob, knob * 2f, knob * 2f), _game.Art.UICircle);

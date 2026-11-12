@@ -1,0 +1,35 @@
+﻿--------- beginning of main
+11-12 15:23:25.233  9827  9866 I Unity   : MemoryManager: Using 'Dynamic Heap' Allocator.
+11-12 15:23:25.243  9827  9866 I Unity   : SystemInfo CPU = ARM64 FP ASIMD AES, Cores = 8, Memory = 15197mb
+11-12 15:23:25.243  9827  9866 I Unity   : SystemInfo ARM big.LITTLE configuration: 6 big (mask: 0xfc), 2 little (mask: 0x3)
+11-12 15:23:25.243  9827  9866 I Unity   : ApplicationInfo com.breakline.m1 version 0.1.0
+11-12 15:23:25.243  9827  9866 I Unity   : Built from '2021.3/respin/2021.3.45f2-0da89fac8e' branch, Version '2021.3.45f2 (88f88f591b2e)', Build type 'Release', Scripting Backend 'il2cpp', CPU 'arm64-v8a', Stripping 'Enabled'
+11-12 15:23:25.265  9827  9866 I Unity   : Company Name: Breakline Original
+11-12 15:23:25.265  9827  9866 I Unity   : Product Name: BREAKLINE M1
+11-12 15:23:27.511  9827  9866 I Unity   : [BREAKLINE] Tuning loaded: 109 rows across 8 tables
+11-12 15:23:27.511  9827  9866 I Unity   : Breakline.Tuning:Load()
+11-12 15:23:27.511  9827  9866 I Unity   : Breakline.GameRoot:Awake()
+11-12 15:23:27.511  9827  9866 I Unity   : UnityEngine.GameObject:AddComponent()
+11-12 15:23:27.628  9827  9866 I Unity   : [BREAKLINE] graphicsUVStartsAtTop=False; presentationFlip=False; gfx=OpenGLES3
+11-12 15:23:27.628  9827  9866 I Unity   : Breakline.Viewport:Init(Transform)
+11-12 15:23:27.628  9827  9866 I Unity   : Breakline.GameRoot:Awake()
+11-12 15:23:27.628  9827  9866 I Unity   : UnityEngine.GameObject:AddComponent()
+11-12 15:23:27.638  9827  9866 I Unity   : [BREAKLINE] M1 level built: 96x24, gate cells=6, spawn=(5.50, 7.70)
+11-12 15:23:27.638  9827  9866 I Unity   : Breakline.M1Level:Build()
+11-12 15:23:27.638  9827  9866 I Unity   : Breakline.GameRoot:Awake()
+11-12 15:23:27.638  9827  9866 I Unity   : UnityEngine.GameObject:AddComponent()
+11-12 15:23:27.639  9827  9866 I Unity   : [BREAKLINE] Perf CSV path: /storage/emulated/0/Android/data/com.breakline.m1/files/M1-Performance.csv
+11-12 15:23:27.639  9827  9866 I Unity   : Breakline.GameRoot:Awake()
+11-12 15:23:27.639  9827  9866 I Unity   : UnityEngine.GameObject:AddComponent()
+11-12 15:23:27.640  9827  9866 I Unity   : [BREAKLINE] Boot complete. Unity 2021.3.45f2, screen 2800x1260, RT 600x270 x4, CSV /storage/emulated/0/Android/data/com.breakline.m1/files/M1-Performance.csv
+11-12 15:23:27.640  9827  9866 I Unity   : Breakline.GameRoot:Awake()
+11-12 15:23:27.640  9827  9866 I Unity   : UnityEngine.GameObject:AddComponent()
+11-12 15:23:29.467  9827  9866 I Unity   : [BREAKLINE] Armored crush target killed; gate open.
+11-12 15:23:29.467  9827  9866 I Unity   : Breakline.EnemySystem:OnCrushed(Enemy)
+11-12 15:23:29.467  9827  9866 I Unity   : Breakline.EnemySystem:CrushInRect(Rect, Single)
+11-12 15:23:29.467  9827  9866 I Unity   : Breakline.TerrainSystem:Tick(Single)
+11-12 15:23:29.467  9827  9866 I Unity   : Breakline.GameRoot:Update()
+11-12 15:23:31.375  9827  9866 I Unity   : [BREAKLINE AUTOTEST] PASS initialAlive=True barrel=True crushed=True gateOpen=True screenshot=/storage/emulated/0/Android/data/com.breakline.m1/files/m1-autotest.png
+11-12 15:23:31.375  9827  9866 I Unity   : Breakline.<AutoTestCrush>d__79:MoveNext()
+11-12 15:23:31.375  9827  9866 I Unity   : UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+11-12 15:23:31.552  9827  9965 E Unity   : Failed to store screen shot (/storage/emulated/0/Android/data/com.breakline.m1/files/storage/emulated/0/Android/data/com.breakline.m1/files/m1-autotest.png)
