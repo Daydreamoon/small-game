@@ -3,17 +3,17 @@
 > 更新时间：2026-11-12 15:25（Asia/Shanghai）
 > 交付性质：M1 灰盒可安装包。**已在 vivo iQOO Neo10 真机安装/启动/触摸冒烟，并采集 P4/P5/P6 CSV。**
 > **用户已于 2026-11-12 指定 iQOO Neo10 为最终目标机；它是高端机，结果不外推中端。M1 尚未最终 Go。**
-> **2026-11-12 15:46 起，最终 APK 是自动丢手雷修复后的 `1203BE...`；本文 `6C9A...`/ED98 段落为历史。最新数据与限制以 [09_自动手雷修复_2026-11-12.md](09_自动手雷修复_2026-11-12.md) 为准。**
-> 此前控制/汉化 + 拖拽 Y 轴方向修复后的 `6C9A...`；其数据见 [08_最终真机验收_2026-11-12.md](08_最终真机验收_2026-11-12.md)。
+> **2026-11-12 16:00 起，最终 APK 是可见瞄准轮盘构建 `CB0BCF...`；本文 `1203BE...`/`6C9A...`/ED98 段落为历史。最新数据与限制以 [10_可见瞄准轮盘_2026-11-12.md](10_可见瞄准轮盘_2026-11-12.md) 为准。**
+> 此前自动丢手雷修复 `1203BE...` 见 [09_自动手雷修复_2026-11-12.md](09_自动手雷修复_2026-11-12.md)；更早的 `6C9A...` 见 [08_最终真机验收_2026-11-12.md](08_最终真机验收_2026-11-12.md)。
 
 ## 1. 文件
 
 | 项 | 值 |
 |---|---|
-| Debug 路径 | `E:\BreaklineDeliver\BREAKLINE_M1_DAY3_DEBUG_arm64.apk` |
-| Debug 大小 / SHA-256 | 21.30 MB / `D6E88A3D59A96D4BE7E3CDEAB1DD633B862E674E01A6C04E14AA1D5572D09882` |
+| Debug 路径 | `E:\BreaklineDeliver\BREAKLINE_M1_DEBUG_FINAL_arm64.apk` |
+| Debug 大小 / SHA-256 | 34,155,864 B / `6788ECC4D60106CDE75470704020026F4BC59429407E1FA34D6D2E948646115E` |
 | Release 路径 | `E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk` |
-| Release 大小 / SHA-256 | 20,041,346 B（约 19.11 MiB）/ `1203BE1C0C2C01E9CA8624577AE4EA293324B3443DE2FBA43E8F3A327D251CF5` |
+| Release 大小 / SHA-256 | 20,030,526 B / `CB0BCFA94D0CA421C8C09A30612FA81DA5DB43752264D2D64ED50156B6DFA6F9` |
 | 包名 / 版本 | `com.breakline.m1` / 0.1.0 (versionCode 1) |
 | 引擎/构建 | Unity 2021.3.45f2，IL2CPP，ARM64，GLES3，Release |
 | minSdk / targetSdk | 26 / 33 |
@@ -29,7 +29,7 @@
 ```powershell
 adb install -r "E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk"
 # 手感/调试可用 Debug：
-# adb install -r "E:\BreaklineDeliver\BREAKLINE_M1_DAY3_DEBUG_arm64.apk"
+# adb install -r "E:\BreaklineDeliver\BREAKLINE_M1_DEBUG_FINAL_arm64.apk"
 ```
 
 iQOO 实测安装/启动命令：
@@ -143,10 +143,20 @@ M1 仍只包含灰盒测试关，不含 M2 内容。
 
 ---
 
-## 9. 2026-11-12 15:46 自动丢手雷修复（当前最终）
+## 9. 2026-11-12 15:46 自动丢手雷修复（历史，已被第 10 节取代）
 
 - APK：`E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk`，20,041,346 B，SHA-256 `1203BE1C0C2C01E9CA8624577AE4EA293324B3443DE2FBA43E8F3A327D251CF5`；`apksigner` v2，Android Debug 证书内测包。
 - 修复：手雷按钮改为 0.08s/28px 短按确认；拖拽、瞄准、已有开火意图时取消；Android 隔离桌面 K/右键路径；第二根手指不再抢触发。
 - 真机：空闲 20s 不自动投掷；从按钮起划被取消；明确按住 300ms 正常投掷；跳跃/瞄准拖拽均不触雷。
 - 回归：P4 三轮 60.22/60.22/60.22，1% low 60.20/60.18/60.17，max 16.62–16.64 ms；P5 一轮 full=200；压敌 PASS 15:46:02。
 - 未重跑 P6；P6 数据属于 `6C9A...`。完整说明见 [09_自动手雷修复_2026-11-12.md](09_自动手雷修复_2026-11-12.md)。
+
+---
+
+## 10. 2026-11-12 16:00 可见瞄准轮盘（当前最终）
+
+- Release：`E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk`，20,030,526 B，SHA-256 `CB0BCFA94D0CA421C8C09A30612FA81DA5DB43752264D2D64ED50156B6DFA6F9`。
+- Debug：`E:\BreaklineDeliver\BREAKLINE_M1_DEBUG_FINAL_arm64.apk`，34,155,864 B，SHA-256 `6788ECC4D60106CDE75470704020026F4BC59429407E1FA34D6D2E948646115E`。
+- 手指按下即绘制圆环，蓝色旋钮跟随拖动方向；上划向上、右划向右；松手消失；无自动瞄准/吸附。
+- 回归：P4 三轮 60.21/60.22/60.22，max 16.63 ms；P5 一轮 full=200；压敌 PASS 16:11:41。
+- P6 有效数据仍来自 1203（56 行，CB0B 未重跑）；完整说明见 [10_可见瞄准轮盘_2026-11-12.md](10_可见瞄准轮盘_2026-11-12.md)。
