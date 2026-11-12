@@ -1,0 +1,13 @@
+﻿
+11-12 23:06:00.412  9971 10038 I Unity   : [BREAKLINE] Launch level extra level1 -> level 1/3
+11-12 23:06:00.508  9971 10038 I Unity   : [BREAKLINE] Level 1/3 built: 96x24, name=训练场, gate=6, spawn=(5.50, 7.70)
+11-12 23:07:18.245  9971 10038 I Unity   : [BREAKLINE] Level 1 route complete, automation=False
+11-12 23:07:20.441  9971 10038 I Unity   : [BREAKLINE] Loading level 2/3 (M1)
+11-12 23:07:20.570  9971 10038 I Unity   : [BREAKLINE] Level 2/3 built: 96x24, name=维修隧道, gate=6, spawn=(5.50, 7.70)
+11-12 23:08:00.021  9971 10038 I Unity   : [BREAKLINE] Level 2 route complete, automation=False
+11-12 23:08:02.212  9971 10038 I Unity   : [BREAKLINE] Loading level 3/3 (M1)
+11-12 23:08:02.357  9971 10038 I Unity   : [BREAKLINE] Level 3/3 built: 96x24, name=屋顶追逐, gate=6, spawn=(5.50, 7.70)
+11-12 23:08:22.881  9971 10038 I Unity   : [BREAKLINE] Level 3 crush target killed; gate open.
+11-12 23:08:30.225  9971 10038 I Unity   : [BREAKLINE] Level 3 route complete, automation=False
+
+
