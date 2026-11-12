@@ -1,0 +1,27 @@
+{
+  "source": "E:\\小游戏开发\\docs\\evidence\\p6-final-6C9A-files\\M1-Performance.csv",
+  "rows": 56,
+  "raw_files": 56,
+  "frames_from_rows": 33203,
+  "frames_from_raw": 33203,
+  "elapsed_s": 551.436,
+  "fps_avg_weighted": 60.211,
+  "fps_1pct_low": 60.252,
+  "fps_0_1pct_low": 60.317,
+  "p1_frame_ms": 16.597,
+  "p0_1_frame_ms": 16.579,
+  "max_frame_ms": 16.65,
+  "windows_max_frame_over_33ms": 0,
+  "raw_frames_over_33ms": 0,
+  "worst_window_1pct_low": 60.16,
+  "worst_window_0_1pct_low": 60.06,
+  "first_timestamp": "2026-11-12T07:30:47.1992220Z",
+  "last_timestamp": "2026-11-12T07:40:52.7898210Z",
+  "build": "Release",
+  "device": "vivo V2425A",
+  "notes": [
+    "complete;mean=16.61ms;p99=16.62ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-074030-stress-200vis-12phys-chain.csv",
+    "complete;mean=16.61ms;p99=16.62ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-074041-stress-200vis-12phys-chain.csv",
+    "complete;mean=16.61ms;p99=16.62ms;rt=600x270;scale=4;raw=M1-RawFrames-20261112-074052-stress-200vis-12phys-chain.csv"
+  ]
+}

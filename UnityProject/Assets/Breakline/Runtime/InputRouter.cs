@@ -60,6 +60,11 @@ namespace Breakline
         private Vector2 _aimStart;
         private bool _aimMoved;
         private bool _aimFired;
+        private int _grenadeCandidate = -1;
+        private Vector2 _grenadeCandidateStart;
+        private float _grenadeCandidateAt;
+        private const float GrenadeTapSlopPx = 28f;
+        private const float GrenadeMinTapSeconds = 0.08f;
         private bool _mouseAim;
         private Vector2 _mouseAimStart;
         private bool _mouseAimMoved;
@@ -161,14 +166,22 @@ namespace Breakline
             bool jumpHold = Input.GetKey(KeyCode.Space);
             bool fireDown = Input.GetKeyDown(KeyCode.J);
             bool fireHold = Input.GetKey(KeyCode.J);
-            bool nadeDown = Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1);
+            bool nadeDown = false;
+            bool nadeHold = false;
+            if (!Application.isMobilePlatform)
+            {
+                // Desktop-only shortcut. On Android, a stray synthetic right mouse
+                // event must never throw a grenade.
+                nadeDown = Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1);
+                nadeHold = Input.GetKey(KeyCode.K) || Input.GetMouseButton(1);
+            }
 
             if (jumpDown) JumpPressed = true;
             if (jumpHold) JumpHeld = true;
             if (fireDown) FirePressed = true;
             if (fireHold) FireHeld = true;
             if (nadeDown) GrenadePressed = true;
-            if (Input.GetKey(KeyCode.K) || Input.GetMouseButton(1)) GrenadeHeld = true;
+            if (nadeHold) GrenadeHeld = true;
 
             // Desktop convenience: drag with the left mouse button to aim and shoot.
             // On Android, touches are the only source, so this branch is skipped.
@@ -214,6 +227,7 @@ namespace Breakline
                 _aimOwner = -1;
                 _aimMoved = false;
                 _aimFired = false;
+                _grenadeCandidate = -1;
                 for (int i = 0; i < _held.Length; i++)
                 {
                     _owner[i] = -1;
@@ -250,9 +264,26 @@ namespace Breakline
                         Btn? btn = HitButton(guiPos);
                         if (btn.HasValue)
                         {
+                            if (btn.Value == Btn.Grenade)
+                            {
+                                // A second finger landing near the grenade button while
+                                // the player is already aiming/firing used to throw a
+                                // grenade immediately. Treat the button as a deliberate
+                                // tap-hold: arm it now, throw only on a clean release.
+                                if (_aimOwner >= 0 || FireHeld || _owner[(int)Btn.Grenade] >= 0)
+                                {
+                                    Debug.Log("[BREAKLINE] Grenade tap ignored: aim/fire already active.");
+                                    continue;
+                                }
+                                _owner[(int)Btn.Grenade] = id;
+                                _grenadeCandidate = id;
+                                _grenadeCandidateStart = guiPos;
+                                _grenadeCandidateAt = Time.unscaledTime;
+                                continue;
+                            }
+
                             _owner[(int)btn.Value] = id;
                             if (btn.Value == Btn.Jump) JumpPressed = true;
-                            if (btn.Value == Btn.Grenade) GrenadePressed = true;
                             continue;
                         }
                     }
@@ -276,6 +307,41 @@ namespace Breakline
                         _joystickOwner = -1;
                         JoystickRaw = Vector2.zero;
                     }
+                }
+
+                if (_grenadeCandidate == id)
+                {
+                    Vector2 grenadeDelta = guiPos - _grenadeCandidateStart;
+                    if (grenadeDelta.magnitude > GrenadeTapSlopPx)
+                    {
+                        Debug.Log("[BREAKLINE] Grenade tap cancelled: finger moved like a drag.");
+                        _grenadeCandidate = -1;
+                        _owner[(int)Btn.Grenade] = -1;
+                    }
+                    else if (Time.unscaledTime - _grenadeCandidateAt >= GrenadeMinTapSeconds)
+                    {
+                        // Deliberate short hold: throw once, while the finger is still
+                        // down. A quick swipe over the button is cancelled above.
+                        if (_aimOwner >= 0 || FireHeld)
+                        {
+                            Debug.Log("[BREAKLINE] Grenade tap ignored: aim/fire became active.");
+                            _grenadeCandidate = -1;
+                            _owner[(int)Btn.Grenade] = -1;
+                        }
+                        else
+                        {
+                            GrenadePressed = true;
+                            _grenadeCandidate = -1;
+                            Debug.Log($"[BREAKLINE] Grenade tap accepted id={id}.");
+                        }
+                    }
+                }
+
+                if (_owner[(int)Btn.Grenade] == id &&
+                    (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
+                {
+                    _grenadeCandidate = -1;
+                    _owner[(int)Btn.Grenade] = -1;
                 }
 
                 if (_aimOwner == id)
@@ -318,6 +384,13 @@ namespace Breakline
                 if (owner >= 0 && (owner >= _seen.Length || !_seen[owner]))
                     _owner[b] = -1;
                 _held[b] = _owner[b] >= 0;
+            }
+
+            if (_grenadeCandidate >= 0 &&
+                (_grenadeCandidate >= _seen.Length || !_seen[_grenadeCandidate]))
+            {
+                _grenadeCandidate = -1;
+                _owner[(int)Btn.Grenade] = -1;
             }
 
             if (_held[(int)Btn.Jump]) JumpHeld = true;
@@ -412,6 +485,7 @@ namespace Breakline
             _aimOwner = -1;
             _aimMoved = false;
             _aimFired = false;
+            _grenadeCandidate = -1;
             for (int i = 0; i < _held.Length; i++)
             {
                 _owner[i] = -1;
