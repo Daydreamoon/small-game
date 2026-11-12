@@ -16,7 +16,7 @@
 | 包名 / 版本 | `com.breakline.m1` / 0.1.0 (versionCode 1) |
 | 引擎/构建 | Unity 2021.3.45f2，IL2CPP，ARM64，GLES3，Release |
 | minSdk / targetSdk | 26 / 33 |
-| 签名 | APK Signature Scheme v2；Debug 用 debug 证书 |
+| 签名 | APK Signature Scheme v2；**本次 Release 仍用 Android debug 证书（内测安装包），不是正式商店签名**；Debug 同 debug 证书 |
 | 启动 Activity | `com.unity3d.player.UnityPlayerActivity` |
 | 方向 | 横屏 |
 | 实测设备 | vivo iQOO Neo10（V2425A），Android 16 / SDK 36，arm64 |
@@ -129,7 +129,7 @@ M1 仍只包含灰盒测试关，不含 M2 内容。
 
 ## 8. 2026-11-12 14:50 最终控制/汉化构建
 
-- APK：`E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk`，20,030,542 B，SHA-256 `ED9846D2AF8FCE9AD4EF4DC4484344B64A7A7E6423AD8482F80E2BAC9A6DF78E`。
+- APK：`E:\BreaklineDeliver\BREAKLINE_M1_DAY6_RELEASE_arm64.apk`，20,030,542 B，SHA-256 `ED9846D2AF8FCE9AD4EF4DC4484344B64A7A7E6423AD8482F80E2BAC9A6DF78E`；`apksigner` 校验为 Android Debug 证书（内测包，不是正式发布签名）。
 - 已实测（iQOO Neo10，Android 16）：
   - 全中文 HUD/调试面板；顶部提示“拖动屏幕瞄准射击”；
   - 左摇杆水平移动，松手后坐标保持，不再自动跑到 B 隧道；
