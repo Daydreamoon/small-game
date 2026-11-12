@@ -58,7 +58,10 @@ namespace Breakline
                 DrawTargetMarkers();
                 DrawGameHud();
                 if (!DebugOpen)
+                {
                     DrawControls();
+                    DrawAimWheel();
+                }
                 if (_game.Player != null && _game.Player.MeleeRingVisible && !DebugOpen)
                     DrawMeleeText();
                 DrawBannerAndCompletion();
@@ -324,6 +327,62 @@ namespace Breakline
             // to aim and shoot. Keep a persistent hint above the action buttons.
             GUI.Label(new Rect(Screen.width * 0.39f, Screen.height - 62f, Screen.width * 0.34f, 52f),
                 "拖动屏幕瞄准射击", _small);
+        }
+
+        private void DrawAimWheel()
+        {
+            InputRouter input = _game.Input;
+            if (input == null || !input.AimWheelVisible) return;
+            if (_game.Player != null && !_game.Player.IsAlive) return;
+            if (_game.Level != null && _game.Level.Completed) return;
+
+            Vector2 center = input.AimWheelOrigin;
+            float radius = Mathf.Clamp(Screen.height * 0.115f, 58f, 132f);
+            float knob = Mathf.Clamp(radius * 0.16f, 8f, 21f);
+
+            // Translucent wheel at the finger-down point.
+            GUI.color = new Color(0.75f, 0.92f, 1f, 0.30f);
+            GUI.DrawTexture(new Rect(center.x - radius, center.y - radius,
+                radius * 2f, radius * 2f), _game.Art.UIRing);
+            GUI.color = new Color(0.05f, 0.12f, 0.18f, 0.18f);
+            GUI.DrawTexture(new Rect(center.x - radius, center.y - radius,
+                radius * 2f, radius * 2f), _game.Art.UICircle);
+
+            // Eight faint direction ticks make the wheel readable on any
+            // background; they are visual only and do not add aiming assist.
+            for (int i = 0; i < 8; i++)
+            {
+                float a = i * Mathf.PI * 0.25f;
+                Vector2 p = center + new Vector2(Mathf.Cos(a), -Mathf.Sin(a)) * (radius * 0.82f);
+                GUI.color = new Color(0.9f, 0.98f, 1f, 0.35f);
+                GUI.DrawTexture(new Rect(p.x - 2f, p.y - 2f, 4f, 4f), _game.Art.UICircle);
+            }
+
+            Vector2 dir = input.AimInput;
+            if (dir.sqrMagnitude > 0.01f)
+            {
+                // AimInput is world-up (+Y), GUI is screen-down (+Y): flip only
+                // for the visual knob. The shot itself uses AimInput unchanged.
+                Vector2 visualDir = new Vector2(dir.x, -dir.y);
+                Vector2 knobPos = center + visualDir * (radius - knob - 4f);
+                GUI.color = new Color(0.35f, 0.85f, 1f, 0.72f);
+                GUI.DrawTexture(new Rect(knobPos.x - knob, knobPos.y - knob,
+                    knob * 2f, knob * 2f), _game.Art.UICircle);
+                GUI.color = new Color(1f, 1f, 1f, 0.55f);
+                GUI.DrawTexture(new Rect(knobPos.x - knob, knobPos.y - knob,
+                    knob * 2f, knob * 2f), _game.Art.UIRing);
+            }
+            else
+            {
+                GUI.color = new Color(0.85f, 0.95f, 1f, 0.50f);
+                GUI.DrawTexture(new Rect(center.x - knob, center.y - knob,
+                    knob * 2f, knob * 2f), _game.Art.UIRing);
+            }
+
+            GUI.color = new Color(0.9f, 0.97f, 1f, 0.82f);
+            GUI.Label(new Rect(center.x - radius, center.y + radius + 4f,
+                radius * 2f, 34f), "滑动瞄准 · 轮盘方向即射击方向", _small);
+            GUI.color = Color.white;
         }
 
         private void DrawTouchButton(Vector2 center, float radius, string text, bool held, Color color)

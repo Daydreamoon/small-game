@@ -79,6 +79,12 @@ namespace Breakline
         public float AimDragThreshold => Mathf.Max(12f, Screen.height * 0.015f);
         public bool AimDragActive => (_aimOwner >= 0 && _aimMoved) || _mouseAimMoved;
 
+        // HUD aim wheel: visible while the aim finger/mouse is down, even before
+        // the drag passes the fire threshold. The knob uses AimInput (world-up),
+        // so the visual direction and the actual shot direction stay identical.
+        public bool AimWheelVisible => _aimOwner >= 0 || _mouseAim;
+        public Vector2 AimWheelOrigin => _mouseAim ? _mouseAimStart : _aimStart;
+
         public bool JumpPressed { get; private set; }
         public bool JumpHeld { get; private set; }
         public bool FirePressed { get; private set; }
