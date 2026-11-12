@@ -243,7 +243,7 @@ namespace Breakline
         private string TargetName()
         {
             Enemy e = _game.Player != null ? _game.Player.CurrentTarget : null;
-            if (e == null) return "无";
+            if (e == null) return "手动";
             if (e.Kind == EnemyKind.ArmoredCrush) return "装甲目标";
             if (e.Kind == EnemyKind.Patrol) return "巡逻兵";
             return "木靶";
@@ -465,9 +465,10 @@ namespace Breakline
                 _debugLabel.fontSize = Mathf.Max(13, Mathf.RoundToInt(h / 52f));
                 _debugSmall.fontSize = Mathf.Max(10, Mathf.RoundToInt(h / 82f));
 
-                GUI.Label(new Rect(x, labelY, panel.width - 48f, 34f), "BREAKLINE / M1 调试与性能", _title);
+                GUI.Label(new Rect(x, labelY, panel.width - 48f, 34f), "BREAKLINE / 关卡调试与性能", _title);
 
                 string metrics =
+                    $"关卡 {_game.Level.LevelNumber}/{M1Level.LevelCount} {_game.Level.LevelName}   " +
                     $"帧率 {_game.Perf.FpsNow:0.0}   分辨率 {_game.Viewport.RtWidth}x{_game.Viewport.RtHeight} x{_game.Viewport.Scale}   " +
                     $"碎片 {_game.Debris.ActiveVisualCount}  (T2 {_game.Debris.T2Count} / T1 {_game.Debris.T1Count} / 压力 {_game.Debris.StressBodyCount})   " +
                     $"地形 {_game.Terrain.ActiveFallingChunks}   链爆 {_game.Props.ChainCount}\n" +
@@ -548,6 +549,19 @@ namespace Breakline
                     _game.Viewport.FlipPresentation = !_game.Viewport.FlipPresentation;
                     Debug.Log($"[BREAKLINE] World presentation flip = {_game.Viewport.FlipPresentation}");
                 });
+            row++;
+
+            float colW3 = (panel.width - 60f - gap * 2f) / 3f;
+            for (int i = 0; i < M1Level.LevelCount; i++)
+            {
+                int levelIndex = i;
+                Button(new Rect(x + i * (colW3 + gap), buttonsY + row * (bh + gap), colW3, bh),
+                    $"关卡 {i + 1}", () =>
+                    {
+                        DebugOpen = false;
+                        _game.LoadLevel(levelIndex);
+                    });
+            }
         }
 
         private void DrawPerfGraph(Rect rect)

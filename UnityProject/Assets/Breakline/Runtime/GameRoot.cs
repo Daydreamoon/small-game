@@ -30,9 +30,30 @@ namespace Breakline
         public PerfLogger Perf { get; private set; }
 
         public bool Initialized { get; private set; }
+        public bool IsAutomation { get; private set; }
+
+        private string _autoMode;
 
         private void Awake()
         {
+            _autoMode = ReadAndroidTestMode();
+            bool levelLaunch = false;
+            if (!string.IsNullOrEmpty(_autoMode) &&
+                _autoMode.StartsWith("level", System.StringComparison.OrdinalIgnoreCase))
+            {
+                int selected;
+                if (int.TryParse(_autoMode.Substring(5), out selected))
+                {
+                    M1Level.Selected = Mathf.Clamp(selected - 1, 0, M1Level.LevelCount - 1);
+                    levelLaunch = true;
+                }
+            }
+
+            IsAutomation = !levelLaunch &&
+                (HasCommandLineArg("--smoke") || HasCommandLineArg("--autotest") ||
+                 HasCommandLineArg("--autostress") || HasCommandLineArg("--autofull") ||
+                 HasCommandLineArg("--autop6") || !string.IsNullOrEmpty(_autoMode));
+
             Application.targetFrameRate = 60;
             QualitySettings.vSyncCount = 0;
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -114,7 +135,7 @@ namespace Breakline
             Debug.Log($"[BREAKLINE] Boot complete. Unity {Application.unityVersion}, screen {Screen.width}x{Screen.height}, " +
                       $"RT {Viewport.RtWidth}x{Viewport.RtHeight} x{Viewport.Scale}, CSV {Perf.CsvPath}");
 
-            string autoMode = ReadAndroidTestMode();
+            string autoMode = _autoMode;
             if (HasCommandLineArg("--smoke") || autoMode == "smoke")
                 StartCoroutine(SmokeCapture());
             else if (HasCommandLineArg("--autotest") || autoMode == "crush")
@@ -361,6 +382,16 @@ namespace Breakline
             Time.timeScale = 1f;
             Scene scene = SceneManager.GetActiveScene();
             Debug.Log($"[BREAKLINE] Restarting scene: {scene.name} ({scene.buildIndex})");
+            SceneManager.LoadScene(scene.buildIndex);
+        }
+
+        public void LoadLevel(int index)
+        {
+            M1Level.Selected = Mathf.Clamp(index, 0, M1Level.LevelCount - 1);
+            if (Perf != null) Perf.Flush("level-change");
+            Time.timeScale = 1f;
+            Scene scene = SceneManager.GetActiveScene();
+            Debug.Log($"[BREAKLINE] Loading level {M1Level.Selected + 1}/{M1Level.LevelCount} ({scene.name})");
             SceneManager.LoadScene(scene.buildIndex);
         }
 
